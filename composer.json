@@ -9,9 +9,20 @@
     "homepage": "https://github.com/TYPO3-Documentation/typo3-docs-theme",
     "require": {
         "php": "^8.0",
-        "doctrine/rst-parser": "^0.6@dev",
-        "t3docs/intersphinx": "dev-main"
+        "doctrine/rst-parser": "dev-develop@dev",
+        "t3docs/intersphinx": "dev-develop@dev"
     },
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TYPO3-Documentation/intersphinx.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/linawolf/rst-parser.git"
+        }
+    ],
     "require-dev": {
         "dg/bypass-finals": "^1.4.1",
         "doctrine/coding-standard": "^10.0",
