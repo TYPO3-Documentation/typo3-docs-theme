@@ -1,0 +1,7 @@
+<div class="flex-shrink-0 p-3 bg-white">
+    <ul >
+        {% for item in tree -%}
+            <li><a href="/output/{{ item.url|raw }}">{{ item.title|raw }}</a></li>
+        {%- endfor %}
+    </ul>
+</div>
