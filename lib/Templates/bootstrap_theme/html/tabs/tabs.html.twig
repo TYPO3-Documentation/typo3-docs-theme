@@ -1,0 +1,13 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        {% for item in groups -%}
+            <button class="nav-link" id="nav-{{ item.id }}-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-{{ item.id }}" type="button" role="tab"
+                    aria-controls="nav-{{ item.id }}" aria-selected="false">{{ item.title }}
+            </button>
+        {%- endfor %}
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    |||
+</div>

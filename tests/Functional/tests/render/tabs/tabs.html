@@ -1,0 +1,18 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link" id="nav-bash-tab" data-bs-toggle="tab" data-bs-target="#nav-bash" type="button" role="tab" aria-controls="nav-bash" aria-selected="false">bash </button>
+        <button class="nav-link" id="nav-powershell-tab" data-bs-toggle="tab" data-bs-target="#nav-powershell" type="button" role="tab" aria-controls="nav-powershell" aria-selected="false">powershell </button>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade" id="nav-bash" role="tabpanel" aria-labelledby="nav-bash-tab">
+        <p>This is a <strong>bash</strong> example.</p>
+        <pre><code class="bash">composer create-project typo3/cms-base-distribution:^11 example-project-directory
+</code></pre>
+    </div>
+    <div class="tab-pane fade" id="nav-powershell" role="tabpanel" aria-labelledby="nav-powershell-tab">
+        <p>This is <code>powershell</code></p>
+        <pre><code class="powershell">composer create-project &quot;typo3/cms-base-distribution:^11&quot; example-project-directory
+</code></pre>
+    </div>
+</div>
