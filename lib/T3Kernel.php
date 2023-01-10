@@ -13,7 +13,9 @@ use Doctrine\RST\TextRoles\TextRole;
 use T3Docs\Theme\Directives\ContainerDirective;
 use T3Docs\Theme\Directives\IgnoredDirective;
 use T3Docs\Theme\Directives\PullQuoteDirective;
+use T3Docs\Theme\Directives\RubricDirective;
 use T3Docs\Theme\Directives\VersionAdded;
+use T3Docs\Theme\Directives\WrapperDirective;
 use T3Docs\Theme\Listener\DocumentRenderListener;
 
 use function array_merge;
@@ -42,8 +44,10 @@ class T3Kernel extends Kernel
             $configuration,
             array_merge($directives, [
                 new VersionAdded(),
-                new PullQuoteDirective(),
-                new ContainerDirective(),
+                new WrapperDirective('pull-quote'),
+                new WrapperDirective('container'),
+                new WrapperDirective('tabs'),
+                new RubricDirective(),
                 new IgnoredDirective('uml'),
                 new IgnoredDirective('rst-class'),
                 new IgnoredDirective('todo'),

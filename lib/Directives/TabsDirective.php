@@ -12,7 +12,7 @@ use RuntimeException;
 use function count;
 use function explode;
 
-class PullQuoteDirective extends SubDirective
+class TabsDirective extends SubDirective
 {
     public function getName(): string
     {
@@ -28,7 +28,7 @@ class PullQuoteDirective extends SubDirective
         array $options
     ): ?Node {
         $wrapperDiv = $parser->renderTemplate(
-            'directive/pull-quote.html.twig',
+            'directive/tabs.html.twig',
             []
         );
 
