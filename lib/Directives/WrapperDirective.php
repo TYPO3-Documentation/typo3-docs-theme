@@ -35,7 +35,7 @@ class WrapperDirective extends SubDirective
         array $options
     ): ?Node {
         $wrapperDiv = $parser->renderTemplate($this->templateName,
-            ['data' => $data]
+            ['data' => htmlspecialchars($data)]
         );
 
         $wrapper = explode('|||', $wrapperDiv, 2);
