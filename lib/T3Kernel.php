@@ -43,10 +43,9 @@ class T3Kernel extends Kernel
         parent::__construct(
             $configuration,
             array_merge($directives, [
-                new VersionAdded(),
                 new WrapperDirective('pull-quote'),
                 new WrapperDirective('container'),
-                new WrapperDirective('tabs'),
+                new WrapperDirective('versionadded'),
                 new RubricDirective(),
                 new IgnoredDirective('uml'),
                 new IgnoredDirective('rst-class'),
