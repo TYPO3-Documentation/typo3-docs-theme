@@ -10,6 +10,7 @@ use Doctrine\RST\Event\PreDocumentRenderEvent;
 use Doctrine\RST\Kernel;
 use Doctrine\RST\References\Reference;
 use Doctrine\RST\TextRoles\TextRole;
+use T3Docs\Theme\Directives\ContainerDirective;
 use T3Docs\Theme\Directives\IgnoredDirective;
 use T3Docs\Theme\Directives\PullQuoteDirective;
 use T3Docs\Theme\Directives\VersionAdded;
@@ -42,8 +43,8 @@ class T3Kernel extends Kernel
             array_merge($directives, [
                 new VersionAdded(),
                 new PullQuoteDirective(),
+                new ContainerDirective(),
                 new IgnoredDirective('uml'),
-                new IgnoredDirective('container'),
                 new IgnoredDirective('rst-class'),
                 new IgnoredDirective('todo'),
                 new IgnoredDirective('index'),
