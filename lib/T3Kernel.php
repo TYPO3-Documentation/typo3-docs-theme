@@ -13,7 +13,7 @@ use Doctrine\RST\TextRoles\TextRole;
 use T3Docs\Theme\Directives\ContainerDirective;
 use T3Docs\Theme\Directives\IgnoredDirective;
 use T3Docs\Theme\Directives\PullQuoteDirective;
-use T3Docs\Theme\Directives\RubricDirective;
+use T3Docs\Theme\Directives\DataDirective;
 use T3Docs\Theme\Directives\VersionAdded;
 use T3Docs\Theme\Directives\WrapperDirective;
 use T3Docs\Theme\Listener\DocumentRenderListener;
@@ -46,7 +46,9 @@ class T3Kernel extends Kernel
                 new WrapperDirective('pull-quote'),
                 new WrapperDirective('container'),
                 new WrapperDirective('versionadded'),
-                new RubricDirective(),
+                new WrapperDirective('deprecated'),
+                new WrapperDirective('versionchanged'),
+                new DataDirective('rubric'),
                 new IgnoredDirective('uml'),
                 new IgnoredDirective('rst-class'),
                 new IgnoredDirective('todo'),
