@@ -10,9 +10,10 @@ use Doctrine\RST\Event\PreDocumentRenderEvent;
 use Doctrine\RST\Kernel;
 use Doctrine\RST\References\Reference;
 use Doctrine\RST\TextRoles\TextRole;
-use T3Docs\Theme\Directives\Tabs\GroupTabDirective;
-use T3Docs\Theme\Directives\IgnoredDirective;
 use T3Docs\Theme\Directives\DataDirective;
+use T3Docs\Theme\Directives\IgnoredDirective;
+use T3Docs\Theme\Directives\TableDirective;
+use T3Docs\Theme\Directives\Tabs\GroupTabDirective;
 use T3Docs\Theme\Directives\Tabs\TabsDirective;
 use T3Docs\Theme\Directives\WrapperDirective;
 use T3Docs\Theme\Listener\DocumentRenderListener;
@@ -46,10 +47,12 @@ class T3Kernel extends Kernel
                 new WrapperDirective('container'),
                 new WrapperDirective('versionadded'),
                 new WrapperDirective('deprecated'),
+                new TableDirective(),
                 new WrapperDirective('versionchanged'),
                 new TabsDirective(),
                 new GroupTabDirective(),
                 new DataDirective('rubric'),
+                new DataDirective('youtube'),
                 new IgnoredDirective('uml'),
                 new IgnoredDirective('rst-class'),
                 new IgnoredDirective('todo'),

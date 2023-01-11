@@ -13,15 +13,15 @@ use function count;
 use function explode;
 use function htmlspecialchars;
 
-class WrapperDirective extends SubDirective
+class TableDirective extends SubDirective
 {
     private string $name;
     private string $templateName;
 
-    public function __construct(string $name, ?string $templateName = null)
+    public function __construct()
     {
-        $this->name         = $name;
-        $this->templateName = $templateName ?? 'directive/' . $this->name . '.html.twig';
+        $this->name         = 'table';
+        $this->templateName = 'directive/table.html.twig';
     }
 
     /** @param string[] $options */
@@ -32,9 +32,14 @@ class WrapperDirective extends SubDirective
         string $data,
         array $options
     ): ?Node {
+        $class      = $options['class'] ?? '';
         $wrapperDiv = $parser->renderTemplate(
             $this->templateName,
-            ['data' => htmlspecialchars($data)]
+            [
+                'header' => htmlspecialchars($data),
+                'class' => $class,
+
+            ]
         );
 
         $wrapper = explode('|||', $wrapperDiv, 2);

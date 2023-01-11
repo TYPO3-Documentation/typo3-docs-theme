@@ -23,6 +23,7 @@ class GroupTabDirective extends Directive
         if ($node instanceof BlockNode) {
             $node = $parser->getSubParser()->parseLocal($node->getValue());
         }
+
         $tabsGroupNode = new TabsGroupNode($parser, $node, $data);
         $document->addNode($tabsGroupNode);
     }
