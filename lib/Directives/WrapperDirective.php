@@ -13,7 +13,33 @@ use function count;
 use function explode;
 use function htmlspecialchars;
 
-class WrapperDirective extends SubDirective
+/**
+ * A wrapper directive passes the data to a template to be rendered. The content
+ * of the directive is rendered and wrapped by the template
+ * ```
+ * ..  my-custom-directive:: className
+ *
+ *     Some **content** with some RST markup.
+ * ```
+ * Can be rendered by:
+ * ```
+ * [
+ *     //...
+ *     new WrapperDirective('my-custom-directive', 'directives/some-template.html.twig'),
+ * ]
+ * ```
+ *
+ * The template must contain exactly one string `|||` in the place that the
+ * template should be split for wrapping the rendered content.
+ *
+ * For example:
+ *
+ * ```
+ * <div class="{{ data }}">|||</div>
+ * ```
+ *
+ */
+final class WrapperDirective extends SubDirective
 {
     private string $name;
     private string $templateName;

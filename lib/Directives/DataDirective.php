@@ -10,7 +10,19 @@ use Doctrine\RST\Parser;
 
 use function htmlspecialchars;
 
-class DataDirective extends Directive
+/**
+ * A data directive passes the data to a template to be rendered.
+ * ```
+ * .. my-custom-directive:: With some Data
+ * ```
+ * Can be rendered by:
+ * ```
+ * [
+ *     //...
+ *     new DataDirective('my-custom-directive', 'directives/some-template.html.twig'),
+ * ]
+ */
+final class DataDirective extends Directive
 {
     private string $name;
     private string $templateName;

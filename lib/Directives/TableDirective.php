@@ -13,7 +13,10 @@ use function count;
 use function explode;
 use function htmlspecialchars;
 
-class TableDirective extends SubDirective
+/**
+ * This directive can configure the table in its content with additional classes
+ */
+final class TableDirective extends SubDirective
 {
     private string $name;
     private string $templateName;

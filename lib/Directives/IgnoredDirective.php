@@ -6,7 +6,21 @@ namespace T3Docs\Theme\Directives;
 
 use Doctrine\RST\Directives\Directive;
 
-class IgnoredDirective extends Directive
+/**
+ * Many documents contain directives that should not be interpreted anymore.
+ * You can use this class to register a directive that is doing nothing and
+ * just ignored.
+ *
+ * ```
+ * [
+ *     //...
+ *     new IgnoredDirective('directive-to-be-ignored'),
+ * ]
+ * ```
+ *
+ *
+ */
+final class IgnoredDirective extends Directive
 {
     private string $name;
 
