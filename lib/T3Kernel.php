@@ -53,6 +53,7 @@ class T3Kernel extends Kernel
                 new GroupTabDirective(),
                 new DataDirective('rubric'),
                 new DataDirective('youtube'),
+                new IgnoredDirective('glossary'),
                 new IgnoredDirective('t3-field-list-table'),
                 new IgnoredDirective('graphviz'),
                 new IgnoredDirective('confval'),
