@@ -158,7 +158,7 @@ class FunctionalTest extends TestCase
         $configuration->silentOnError(true);
 
         $kernel = new T3Kernel($configuration);
-        $parser =  new Parser($kernel);
+        $parser =  new Parser($configuration, $kernel);
 
         $environment = $parser->getEnvironment();
         $environment->setCurrentDirectory($currentDirectory);

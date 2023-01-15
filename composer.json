@@ -9,8 +9,8 @@
     "homepage": "https://github.com/TYPO3-Documentation/typo3-docs-theme",
     "require": {
         "php": "^8.0",
-        "doctrine/rst-parser": "dev-develop@dev",
-        "t3docs/intersphinx": "dev-develop@dev"
+        "doctrine/rst-parser": "^0.6@dev",
+        "t3docs/intersphinx": "^0.1.1@dev"
     },
 
     "repositories": [
