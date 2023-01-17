@@ -12,6 +12,10 @@ use Doctrine\RST\References\Reference;
 use Doctrine\RST\TextRoles\TextRole;
 use T3Docs\Theme\Directives\DataDirective;
 use T3Docs\Theme\Directives\IgnoredDirective;
+use T3Docs\Theme\Directives\PhpDomain\PhpClass;
+use T3Docs\Theme\Directives\PhpDomain\PhpConst;
+use T3Docs\Theme\Directives\PhpDomain\PhpMethod;
+use T3Docs\Theme\Directives\PhpDomain\PhpNamespace;
 use T3Docs\Theme\Directives\TableDirective;
 use T3Docs\Theme\Directives\Tabs\GroupTabDirective;
 use T3Docs\Theme\Directives\Tabs\TabsDirective;
@@ -43,6 +47,10 @@ class T3Kernel extends Kernel
         parent::__construct(
             $configuration,
             array_merge($directives, [
+                new PhpNamespace(),
+                new PhpClass(),
+                new PhpMethod(),
+                new PhpConst(),
                 new WrapperDirective('pull-quote'),
                 new WrapperDirective('container'),
                 new WrapperDirective('versionadded'),

@@ -1,0 +1,33 @@
+<dl class="php method">
+    <dt class="sig sig-object php"
+        id="{{ id }}">
+        <span class="sig-name descname">
+            <span class="pre">{{ name }}</span>
+        </span>
+        <span class="sig-paren">(</span>{{ argumentText }}<span class="sig-paren">)</span>
+        <a
+                class="headerlink"
+                href="#{{ id }}"
+                title="Permalink to this definition">¶</a>
+    </dt>
+    <dd>
+        {{ description|raw }}
+        <dl class="field-list simple">
+            {% for parameter in parameterArray -%}
+
+            {%- endfor %}
+            {% if returnType %}
+                <dt class="field-odd">Return type</dt>
+                <dd class="field-odd">
+                    <p>
+                        <span>
+                            <code class="xref php php-obj docutils literal notranslate">
+                                <span class="pre">string</span>
+                            </code>
+                        </span>
+                    </p>
+                </dd>
+            {% endif %}
+        </dl>
+    </dd>
+</dl>
